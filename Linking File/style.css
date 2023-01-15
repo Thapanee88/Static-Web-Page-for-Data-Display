@@ -1,0 +1,16 @@
+body {
+    background: black;
+}
+a {
+    background: green;
+    color: yellow;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 15px 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: sans-serif;
+}

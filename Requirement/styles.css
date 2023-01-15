@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+* {
+    font-family: 'Mukta', sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+/*naenar*/
+.navbar-brand {
+    margin-left: 2%;
+}
+.mynav ul li a {
+    margin-right: 30px;
+}
+.mynav ul li a:hover{
+    border-bottom: 2px solid #60955F;
+    background: #F84031;
+}
+.mynav ul li a:active{
+    color: #384C9D !important;
+}
+/*home*/
+.grass, .sky, .road {
+    position: relative;
+}
+.sky {
+    height: 50%;
+    animation: sky 10s linear infinite;
+}
+.grass {
+    height: 20%;
+    background: seagreen;
+}
+.road {
+    height: 30%;
+    background: dimgray;
+    box-sizing: border-box;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+    width: 100%;
+}
+.line {
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+.car {
+    width: 100px;
+    position: absolute;
+    top: -20px;
+    left: 5%;
+    animation: drive 10s linear infinite;
+}
+.sun {
+    width: 100px;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    animation: sun 10s linear infinite;
+}
+@keyframes drive {
+    from{transform: translateX(0);}
+    to{transform: translateX(1300px);}
+}
+@keyframes sun {
+    0% {top: 85%;}
+    25% {top: 40%;}
+    50% {top: 20%;}
+    75% {top: 40%;}
+    100% {top: 85%;}
+}
+@keyframes sky {
+    0% {background: #ffcc33;}
+    25% {background: #F9EF42;}
+    50% {background: #33ccff;}
+    75% {background: #3366ff;}
+    100% {background: #6633ff;}
+}
+/*about*/
+#about {
+    background-image: url('bg.jfif');
+    background-size: cover;
+}
+.content {
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    right: 5%;
+    top: 100px;
+    bottom: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+}
+.content h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.content p {
+    text-align: left;
+    text-indent: 50px;
+    padding: 0px 10px 0px 10px;
+}
+/*data*/
+h3{
+    text-align: center;
+    margin-top: 40px !important;
+}
+.table-container {
+    padding: 0 10%;
+    margin: 40px auto 0;
+    height: 400px;
+    overflow-y: scroll;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table thead th {
+    background-color: whitesmoke;
+}
+.table table tr th {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: #fff;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid whitesmoke;
+}
+.table th {
+    text-align: center !important;
+}
+.table tbody tr td {
+    font-size: 14px;
+    letter-spacing: 0.35;
+    font-weight: normal;
+    color: blue;
+    background-color: #CAC9D7;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid whitesmoke;
+}
+h4 {
+    text-align: center;
+    margin-top: 50px !important;
+}
+.from {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+}
+.from .input-field {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.from .input-field label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.from .input-field .input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3 ease;
+}
+.from .input-field .input:focus {
+    border: 1px solid #DC5F4D;
+}
+.from .updated button {
+    margin-left: 40%;
+}
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    .table tr {
+        margin-bottom: 15px;
+    }
+    .table tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+    .from .input-field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .from .input-field label {
+        margin-bottom: 5px;
+    }
+    .content {
+        width: 90%;
+    }
+}
